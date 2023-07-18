@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+.container{
+    height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)) ,url(images/bg.png);
+    background-position: center;
+    background-size: cover;
+}
+p{
+    font-size: 14px;                      /* büyükllük ayarlar */
+    color: #fff;
+    line-height: 30p    x;                /* satır yüksekliği */
+}
+.btn{
+    cursor: pointer;                      /* fare degişir tıklanır olur */
+    border-radius: 20px;                  /* koseler yuvarlak yapma */
+    border: 1px solid red;              /* köşeleri kırmızı ve kalınlık ayarlar */
+    padding: 12px 28px;
+    transition: 0.5s;
+    font-size: 13px;                      /* büyükllük ayarlar */
+    font-weight: 700;                     /* yazı kalınlık ayarlar */
+    margin-top: 30px;
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;                  /* alt cizgiyi kaldırır */
+}
+.btn:hover{
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+}
+.navbar{
+    height: 12%;
+    display: flex;                          /* yan yana getirir */
+    justify-content: space-between;         /* SAGA SOLA AYIRIR */
+    align-items: center;                    /* dikeyde ortalar */
+}
+NAV UL li a{
+    color: #fff;
+    text-decoration: none;                  /* alt cizgiyi kaldırır */
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    color: #000;
+ }
+nav ul{
+    list-style: none;                       /* etrafı temızler */
+    display: flex;                          /* yan yana getirir */
+    column-gap: 20px;                       /* aralarını acar */
+}
+nav ul li a:hover{
+   color: black;
+}
+.row{
+    display: flex;                          /* yan yana getirir */
+    align-items: center;                    /* dikeyde ortalar */
+    column-gap: 10px;                       /* aralarını acar */
+    height: 88%;
+}
+.col{
+    flex-basis: 50%;                        /* yarı yarıya ayarlar */
+}
+h1{
+    color: #fff;
+    font-size: 100px;                       /* büyükllük ayarlar */
+}
+.cards{
+    max-width: 500px;
+    margin: auto;
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;             /* genişlik ve yükseklik ayarlamaya izin vermesidir. */
+    border-radius: 10px;                    /* koseler yuvarlak yapma */
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;                        /* fare degişir tıklanır olur */
+    border: 1px solid red;
+    position: relative;
+    padding: 8px 12px;
+    transition: 0.5s;
+    margin: 10px 15px;
+}
+.card:hover{
+    transform: translatey(-10px);
+    border-color: #fff;
+}
+.card .card-head{
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    border-radius: 6PX;                     /* koseler yuvarlak yapma */
+    padding: 6px;
+}
+.card .card-bottom{
+    position: absolute;                     /* axenden cıkıyor */
+    bottom: 26PX;
+}
+.card.card-1{
+    background-image: url(images/pic-1.png);
+}
+.card.card-2{
+    background-image: url(images/pic-2.png);
+}
+.card.card-3{
+    background-image: url(images/pic-3.png);
+}
+.card.card-4{
+    background-image: url(images/pic-4.png);
+}
