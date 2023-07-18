@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Roboto:wght@300;400;500;700&display=swap');
+
+ /*! BASE START  */
+
+*{
+    margin: 0;
+}
+body{
+
+    font-family: 'Electrolize', sans-serif;
+}
+
+.container{
+    background-color: black;
+    color: wheat;
+}
+
+/*! BASE  AND  */
+
+/*! NAVBAR START */
+
+.navbar{
+    background-color: black ;
+    height: 60px;
+    color: white;
+    position: sticky;
+    top:0;
+    z-index: 1;         /* herzaman ön planda olcak */
+}
+
+.navbar-wrapper{
+    display: flex;                      /* yanına getırme */
+    justify-content: space-between;     /* esnek öğeleri kabın ortasına hizalar */
+    align-items: center;                /* dikeyde ortalar */
+    height: 100%;
+    padding: 0 50px;
+}
+
+.logo{
+    color: rgb(255, 70, 70);
+    font-size: 30px;
+}
+
+.menu-list{
+    display: flex;          /* yanına getırme */
+    list-style: none;       /* etrafı temizler */
+    column-gap: 30px;       /* aralarını açma */
+    padding: 0;
+    
+}
+
+.menu-list-item{
+    cursor: pointer;        /* fare degişir tıklanır olur */
+    transition: 0.5s
+}
+
+.menu-list-item.active{
+    font-weight: bold;      /* yazıyı kalın yapar */
+}
+.profile-container{
+    display: flex;          /* yanına getırme */
+    align-items: center;    /* dikeyde ortalar */
+    column-gap: 20px;       /* aralarını açma */   
+}
+
+.menu-list-item:hover{
+    font-weight: bold;      /* yazıyı kalın yapar */ 
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;          /* resimlerde en boy oranını korur ve verilen boyutu doldurur.  Görüntü sığacak şekilde kırpılacaktır */
+    border-radius: 50%;         /* koseler yuvarlak yapma */
+}
+
+.profil-text-container{
+    display: flex;          /* yanına getırme */
+    align-items: center;    /* dikeyde ortalar */
+    column-gap: 5px;        /* aralarını açma */
+    line-height: 1;         /* satır yüksekliği */
+}
+
+.toggle{
+    width: 40px;
+    height: 20px;
+    border-radius: 30px;            /* koseler yuvarlak yapma */
+    align-items: center;            /* dikeyde ortalar */
+    justify-content: space-around;  /* eşit şekilde ayırı */
+    position: relative;
+    display: flex;                  /* yanına getırme */
+    background-color: white;
+}
+
+.toggle-icon{
+    color: goldenrod;
+   
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;             /* koseler yuvarlak yapma */
+    cursor: pointer;                /* fare degişir tıklanır olur */
+    position: absolute;
+    right: 1px;
+    transition: .5s all ease;
+}
+
+/*! NAVBAR AND */
+
+/*! SİDEBAR START */
+
+.sidebar{
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 50PX;
+    display: flex;              /* yanına getırme */
+    flex-direction: column;     /* esnek yön : sütun ;(yukarıdan aşşagı sıralar) */
+    align-items: center;        /* dikeyde ortalar */ 
+    padding-top: 60px;
+    row-gap: 40px;              /* yukarıdan aşşagı olanların aralarını açar */
+    position: fixed;
+    top: 0;
+}
+
+.sidebar i{
+    cursor: pointer;        /* fare degişir tıklanır olur */
+    color: white;
+    font-size: 20px;        /* büyüklük ayarlar */
+}
+
+/*! SİDEBAR AND */
+
+/*! FEATURED CONTENT START */
+.content-wrapper{
+    margin-left: 50px;
+}
+
+.featured-content{
+    background: url(img/spiderman.jpg);
+    padding: 50px;
+    height:82.6vh;
+    background-size: 100% 100%;
+    transition: .5s;
+}
+
+.featured-title{
+    width: 400px;
+    
+}
+
+.featured-desc{
+    width: 500px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    margin: 30px 0;
+    color: black;
+}
+
+.featured-buttons{
+    display: flex;          /* yanına getırme */
+    gap: 20px;              /* hem geniş hem dikey ekranlarda aralarını açma */
+    flex-wrap: wrap;        /* ekranı küçültügümüzde alt alta getirir */
+
+}
+
+.featured-buttons button{
+    padding: 10px 25px;
+    border-radius: 2px;     /* koseler yuvarlak yapma */
+    border: none;           /* kenarlıkları kaldırır */
+    outline: none;          /* kenarlıgın üstün deki şekillerı kaldırır */
+    cursor: pointer;        /* fare degişir tıklanır olur */
+    display: flex;          /* yanına getırme */
+    column-gap: 10px;       /* aralarını açma */
+    font-size: 16px;        /* büyüklük ayarlar */
+    font-weight: bold;      /* yazıyı kalın yapar */
+}
+
+.featured-buttons .info-button{
+    background: rgb(145, 142,142, 0.5);
+    color: white;
+}
+
+/*! FEATURED CONTENT AND */
+
+/*! FİLTER START */
+
+.movie-list-filter{
+    margin: 20px 0 20px 50px;
+    padding: 20px
+}
+
+.movie-list-filter select{
+    background-color: black;
+    color: white;
+    padding: 7px 0;
+    width: 125px;
+}
+
+/*! FİLTER AND */
+
+/*! MOVİE LİST START */
+ .movi-list-container{
+    margin-left: 70px;
+ }
+ .movie-item-title{
+    cursor: pointer;
+ }
+ 
+.movie-list{
+    list-style: none;       /* etrafı temizler */
+    padding: 0;
+    height: 300px;
+    display: flex;          /* yanına getırme */
+    column-gap: 30px;       /* aralarını açma */
+    align-items: center;    /* dikeyde ortalar */
+    transform: translate(0);
+    transition: 1s all ease-in-out;
+}
+
+.arrow{
+    width: 100px;
+    display: flex;          /* yanına getırme */
+    font-size: 120px;
+    position: absolute;
+    right: 0;
+    top:100px;
+    cursor: pointer;        /* fare degişir tıklanır olur */
+    opacity: .5;
+    transition: .5s;
+}
+
+.arrow:hover{
+    opacity: 1;
+}
+.movi-list-wrapper{
+    overflow: hidden;       /* Taşmayı engeller sıkrovu engeller */
+    position: relative;
+    
+}
+
+.movie-item{
+    position: relative;
+    
+}
+
+.movie-item:hover .movie-item-title,
+.movie-item:hover .movie-item-buttons{
+    opacity: 1;
+}
+
+.movie-item:hover .movie-item-img{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: .5;
+}
+
+.movie-item-img{
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: 1s all ease-in-out;
+}
+
+.movie-item-title{
+    background-color: rgb(40, 40, 40, 0.4);
+    padding: 0 10px;
+    font-size: 28px;        /* büyüklük ayarlar */
+    font-weight: bold;      /* yazıyı kalın yapar */
+    position: absolute;
+    top: 20%;
+    left: 50px;
+    opacity: 0;             /* Görünürlügü azaltma saydamlık ayarı */
+    transition: 1s all ease-in-out;
+}
+
+.movie-item-buttons{
+    background-color: rgb(40, 40, 40, 0.4);
+    padding: 10px;
+    font-size: 18px;        /* büyüklük ayarlar */
+    font-weight: bold;      /* yazıyı kalın yapar */
+    position: absolute;
+    bottom: 10%;
+    left: 50px;
+    display: flex;          /* yanına getırme */
+    column-gap: 20px;       /* aralarını açma */
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movie-item-buttons i{
+    cursor: pointer;        /* fare degişir tıklanır olur */
+    opacity: .5;
+    font-size: 20px;
+    transition: .5s all ease;
+}
+.movie-item-buttons i:hover{
+    opacity: 1;
+}
+/*! MOVİE LİST AND */
+
+/*! DARK MODE AND */
+
+.container.active{
+    background-color: white;
+}
+.navbar.active{
+    background-color: white;
+    color: black;
+}
+.sidebar.active{
+    background-color: white;
+    color: black;
+}
+.sidebar i.active{
+    color: black;
+}
+.toggle.active{
+    background-color: black;
+}
+.toggle-ball.active{
+    background-color: white;
+    transform: translate(-20px);
+}
+.movie-list-filter select.active{
+    background-color: white;
+    color: black;
+}
+.movi-list-title.active{
+    color: black;
+}
+
+/*! DARK MODE AND */
+/*! RESPONSİVE START */
+@media only screen and (max-width:700px) {
+    .menu-container{
+        display: none;
+    }
+
+    .featured-content{
+        height: 40vh;
+    }
+
+    .featured-desc{
+        overflow: hidden;       /* Taşmayı engeller sıkrovu engeller */
+        display: -webkit-box;
+        -webkit-line-clamp: 5;  /* kac satır gözüktügünü ayarlıyor */
+        -webkit-box-orient: vertical;
+        max-width: 200px;
+        padding: 0;
+    }
+
+    .featured-content img{
+        width: 250px;
+        margin-left: -10px;
+
+    }
+}
+
+
+
+/*! RESPONSİVE ANDT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
