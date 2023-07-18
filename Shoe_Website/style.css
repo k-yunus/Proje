@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #1e2227;
+    color: #fff;
+}
+nav{
+    background: #1e2227;
+    display: flex;                  /* anyana getirir */
+    justify-content: space-between; /* birini en sola birini en saga atar */
+    align-items: center;            /* dikeyde ortalar */
+    padding: 30px 8%;
+    position: fixed;                /* sıkrov çıkarsa aşşağıda kalsın */
+    top: 0;
+    width: 100%;
+    z-index: 1;                     /* herzaman önplanda olcak */
+}
+form{
+    background-color: blue;
+}
+nav .navl-inks  a{
+    color: #fff;
+    font-size: 24px;                /* büyüklük ayarlar */
+    text-decoration: none;          /* altı cızgılıyse kaldırır */
+}
+.navl-inks{
+    display: flex;              /* anyana getirir */
+    column-gap: 20px;           /* aralarını açar */
+}
+.logo{
+    cursor: pointer;            /* fareyi götürdügümüzde tıklanır olur */
+    width: 120p x;
+}
+.row{
+    height: 100%;
+    width: 100%;
+    display: flex;              /* anyana getirir */
+    margin-bottom: 100px;
+}
+.row .col-1,
+.row .col-2{
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;    /* esnek öğeleri kabın ortasına hizalar */
+    flex-direction: column;     /* esnek yön : sütun ; */
+}
+.price{
+    display: flex;              /* anyana getirir */
+    align-items: flex-end;      /* iki yazı yan yana biri küçükse asagı ındirir */
+    column-gap: 10px;           /* aralarını açar */
+    margin-top: 10px;
+}
+.row .col-1{
+    padding-left: 8%;
+}
+.row .col-1 h1{
+    font-size: 74px;            /* büyüklük ayarlar */
+    line-height: 100px;         /* satır yüksekliği */
+    margin-bottom: 5px;
+}
+.row .col-1 p{
+    padding-right: 10px;
+    line-height: 14px;         /* satır yüksekliği */
+    margin-bottom: 10px;        /* aşşağıdan yükseklik */
+}.row .col-1 h2{
+    font-size: 25px;         /* büyüklük ayarlar */
+    line-height: 1;          /* satır yüksekliği */
+}
+
+.col-1 .buttons{
+    display: flex;          /* anyana getirir */
+    column-gap: 10px;       /* aralarını açar */
+    flex-wrap: wrap;        /* ekranı küçültügümüzde alt alta getirir */
+}
+.col-1 .buttons button,
+.col-1 .buttons a{
+    display: inline-block;
+    width: fit-content;
+    padding: 18px 50px;
+    background: red;
+    border: none;
+    color: #fff;
+    text-decoration: none;      /* altı cızgılıyse kaldırır */
+    font-size: 18px;            /* büyüklük ayarlar */
+    margin-top: 20px;
+    cursor: pointer;            /* fareyi götürdügümüzde tıklanır olur */
+    transition: 0.5s ease;
+}
+.col-1 .buttons button:hover,
+.col-1 .buttons a:hover{
+color: #fff;
+background-color: #aa0505;
+transform: translatey(-5px)
+}
+.col-2{
+    background: red;
+    position: relative;
+}
+.col-2 h1{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    font-size: 130px;            /* büyüklük ayarlar */
+    opacity: 0.3;
+}
+.col-2 .feature-img{
+    width: 100%;
+    text-align: center;         /* ortalar */
+}
+.col-2 .feature-img img{
+    width: 60%;
+    transform: rotate(-20deg);
+    transition: 0.5s ease-in;
+}
+.col-2 .feature-img img:hover{
+transform: rotate(0);
+}
+.small-img-wrapper{
+    display: flex;          /* anyana getirir */
+    width: 80%;
+    margin: 70px auto 0;
+    align-items: center;     /* dikeyde ortalar */
+    justify-content: space-between;
+}
+.small-img{
+    width: 80px;
+}
+.small-img img {
+    width: 120px;
+    transform: rotate(-20deg);
+    transition: 0.5s;
+}
+.small-img img:hover {
+    transform: translate(-5px);
+}
+.small-img:nth-child(1){
+    background: #b9c8ff;
+}
+.small-img:nth-child(2){
+    background: #ff6767;
+}
+.small-img:nth-child(3){
+    background: #b1ffdd;
+}
+.small-img:nth-child(4){
+    background: #9dff90;
+}
