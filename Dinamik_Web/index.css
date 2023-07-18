@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* "font-family: -apple-system" bu kod kullanıcı hangi PC ile girdiyse onun fontunu gösterir */
+}
+body{
+    background: #161616;
+    overflow: hidden;
+}
+.conteiner{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.conteiner .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.conteiner .header:before{
+    content: "ADİDAS"; 
+    position: absolute;
+    TOP: 35%;
+    left: 55%;
+    color: rgba(180, 164, 164, 0.603);
+    font-size: 150px;
+    font-weight: bold;
+    opacity: 0.1;
+    letter-spacing: 5px;
+    z-index: -1;   /* yazı en arkada olur */
+}
+.conteiner .header i{
+    color: #fff;
+    cursor: pointer;
+}
+.conteiner .header p{
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+}
+.conteiner .header .logo-two{
+    height: 4px;
+    padding: 0 4px;
+    cursor: pointer;    
+}
+.conteiner .header .logo{
+    display: flex;
+    align-items: center;
+    
+}
+.conteiner .header .line{
+    display: block;
+    width: 45px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    margin-left: 4px;
+}
+/* ROW SECTİON */
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.row .col-2 h1{
+    color: #fff;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    margin: 25px 0;
+}
+.row .col-2 p{
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.row .col-2 .btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #E0484B;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 20px;
+    margin-top: 45px;
+    border-radius: 35px;
+    transition: 1s all ease;
+}
+.row .col-2 .btn:hover{
+    background-color: #7a191b;
+}
+/* RİNSECTİON */
+.col-2 img{
+    width: 100%;
+    max-width: 580px;
+}
+
+#circle-ring{
+    padding-left: 130px;
+    padding-top: 60px;
+}
+
+.col-2 .ring{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 3px solid;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.col-2 .ring:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid red;
+    border-top: 3px solid #f87509;
+    border-right: 3px solid #03edfd;
+    z-index: -1;
+    border-radius: 50%;
+    top: -3px;
+    left: -3px;
+
+    /*animation-name: ruturecircle;             isim verdik 
+    animation-timing-function: 10s;             animasyon hızı 
+    animation-iteration-count: infinite;        animasyon tekrarı sonsuz   
+    animation-timing-function:  linear; */
+    animation: ruturecircle 10s linear infinite;
+}
+.col-2 .ring .circle{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: transparent;
+    transform-origin: left;         /* baslamna referans yeri */
+    animation: return 10s linear infinite;
+    z-index: -1;
+}
+.col-2 .ring .circle:before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -9px;
+    width: 16px;
+    height: 16px;
+    background: #fff12e;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fff12e;
+}
+
+.col-2 .ring-two{
+    position: absolute;
+    top: 8.4%;
+    left: 53.8%;
+    width: 500px;
+    height: 500px;
+    background: transparent;
+    border: 3px solid #da1bf3;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.col-2 .ring-two:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -3px;
+    right: -3px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-bottom: 3px solid #fff12e;
+    border-left: 3px solid #fff12e;
+    box-shadow: 0 0 20px hwb(113 18% 0%);
+    animation: ruturecircle2 10s linear infinite;
+}
+.col-2 .ring-two .circle-two{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: transparent;
+    transform-origin: left;         /* baslamna referans yeri */
+    animation: return2 11.4s linear infinite;
+}
+.col-2 .ring-two .circle-two:before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    background: #fff12e;
+    border-radius: 50%;
+    box-shadow: #fff12e;
+}
+
+@keyframes ruturecircle {
+    0%{
+        transform: rotate(40deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes return { 
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ruturecircle2 {
+/*     0%{
+        transform: rotate(-40deg);
+    } */
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes return2 { 
+    /* 0%{
+        transform: rotate(5deg); 
+    } */
+    100%{
+        transform: rotate(-360deg);
+    }
+}
