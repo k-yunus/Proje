@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background: url(resim.jpg);
+    height: 100vh;
+    background-size: 100% 100%;
+}
+.container .navbar{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(22, 112, 214, 0.4);
+}
+.navbar ul{
+    float:right;                    /* birbirinden ayırır */
+    margin-right: 20px;             /* sagdan sola kaydırma */
+}
+.navbar .logo{
+    display: inline-block;          
+    margin-left: 50px;              /* soldan saga kaydırma */
+    margin-top: 20px;               /* yukardan assa kaydırma */
+    background-color: red;
+    padding: 5px;
+    border-radius: 56px             /* koseler yuvarlak yapma */
+}
+    .logo a{
+    text-decoration: none;          /* altı cızgılıyse kaldırır */    
+    font-size: 30px;                /* buyukluk ayarlar */
+    font-family: sans-serif;        /* yazı sitili */
+    color: #f3f33f;
+}
+.navbar ul li{
+    display: inline-block;
+    list-style: none;               /* etrafı temizler */
+    margin: 0 0px;                  /* aralarını acar */
+    line-height: 80px;              /* yukardan assa kaydırma */
+}
+ .navbar ul li a{
+    text-decoration: none;          /* altı cızgılıyse kaldırır */
+    color: white;
+    font-size: 20px;
+    padding: 6px 13px;
+    font-family: Roboto;            /* 1'i eklemen lazim */
+    transition: 0.5s;
+}
+.navbar ul li a.active,
+.container ul li a:hover{
+    background: #ff6e00;
+    border-radius: 2px;
+}
+.container .center{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    left: 20%;transform: translate(-50%-60%);
+    font-family: sans-serif;
+    user-select: none;
+}
+.center h1{
+    color: black;
+    font-size: 70px;
+    font-weight: bold;
+    width: 900px;
+    text-align: center;
+}
+.center h2{
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    width: 885px;
+    margin-top: 10px;
+    text-align: center;
+}
+.center .buttons{
+    margin: 35px 280px;
+}
+.buttons button{
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffb3b3;
+    background: rgb(207,96,88);
+    border-radius: 25px;
+    border: solid 1px red;
+    cursor: pointer;                /* fare degişir */
+    transition: 0.5s;
+}
+.buttons button:hover{
+    background: #fff;
+
+}
+
+.menu a{
+    width:150px;
+    height:50px;
+    display: inline-block;margin-top: 100px;
+    margin:0;
+    padding:5px;
+    color: #1B1B1B;
+    background-color: #E2E2E2;
+    text-decoration: none;
+    border-top:5px solid #999
+  }
